@@ -1,13 +1,14 @@
 import React from 'react';
 import TodoItem from './TodoItem';
+import {ListGroup} from 'react-bootstrap';
 
 function TodoList({todos, removeTodo}) {
     return (
-        <div>
+        <ListGroup>
             {todos.map((todo, index) => (
-                <TodoItem key={index} index={index} todo={todo} removeTodo={removeTodo}/>
+                <TodoItem key={index} index={index} todo={todo} removeTodo={removeTodo} />
             ))}
-        </div>
+        </ListGroup>
     );
 };
 
